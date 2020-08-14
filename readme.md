@@ -13,6 +13,7 @@ The softwares required for compilation and deployment are:
 WinAVR 20100110     ~= 2.19
 Python              ~= 3.7
 avrdude             ~= 5.10
+Proteus 23525       ~= 8.6
 ```
 
 ## Compilation
