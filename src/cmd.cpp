@@ -16,7 +16,8 @@
  * 
  * The command currently implemented are:
  * 		user	Performs operations on user database.
- * 		lcd		Grants access to LCD hardware.
+ * 		lcd	Grants access to LCD hardware.
+ *  		clear	Clears the terminal window.	
  * 
  * The command 'user' has the following format.
  * Usage: user [-option(s)]
@@ -58,6 +59,7 @@ void CMD::parse()
 		CMD::pgm_printf(help_prompts[0]);
 		CMD::pgm_printf(help_prompts[1]);
 		CMD::pgm_printf(help_prompts[2]);
+		CMD::pgm_printf(help_prompts[3]);
 		return;
 	}
 	
@@ -161,7 +163,10 @@ void CMD::parse()
 			CMD::pgm_printf(l_help);
 		}
 	}
-	
+	else if (strcmp(token, "clear")==0)
+	{
+		UART::Send(CLC);
+	}
 	else
 	{
 		SIO::printf("\'");
