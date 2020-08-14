@@ -33,6 +33,7 @@ const char prompt[] PROGMEM = "cmd@avr:~$ ";
 const char help_1[] PROGMEM = "The commands are:\r";
 const char help_2[] PROGMEM = "    user    Performs operations on user database.\r";
 const char help_3[] PROGMEM = "    lcd     Grants access to LCD hardware.\r";
+const char help_4[] PROGMEM = "    clear   Clears the terminal window.\r";
 
 const char user_1[] PROGMEM = "Usage: user [-option(s)]\r";
 const char user_2[] PROGMEM = "Performs operations on user database.\r";
@@ -85,7 +86,8 @@ PGM_P const help_prompts[] PROGMEM =
 {
 	help_1,
 	help_2,
-	help_3
+	help_3,
+	help_4
 };
 
 PGM_P const user_prompts[] PROGMEM =
